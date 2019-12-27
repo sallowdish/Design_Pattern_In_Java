@@ -10,9 +10,11 @@ public class CurrentWeatherDisplay implements Observer, Display {
 	}
 
 	public void update(float temperature, float humidity, float pressure) {
-		System.out.println("Receive message from subject.");
-		this.temperature = temperature;
-		this.humidity = humidity;
+		System.out.printf("%s:\tReceive message from subject.\n", this.id);
+		if (temperature != 0.0f)
+			this.temperature = temperature;
+		if (humidity != 0.0f)
+			this.humidity = humidity;
 		this.display();
 	}
 
@@ -22,6 +24,7 @@ public class CurrentWeatherDisplay implements Observer, Display {
 		if(this.temperature != 0.0f)
 			System.out.println("---\tTemperature: " + this.temperature +"C\t---");
 		if (this.humidity != 0.0f)
-			System.out.println("---\tHumidity: " + this.humidity + "%\t---\n");
+			System.out.println("---\tHumidity: " + this.humidity + "%\t---");
+		System.out.println();
 	}
 }
