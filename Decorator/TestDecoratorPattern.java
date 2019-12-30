@@ -44,7 +44,7 @@ public class TestDecoratorPattern {
 		}
 		finally
 		{
-			lazyPrint("Added %s...total cost is %f", newDrink.getDescription(), newDrink.cost());
+			lazyPrint("Added %s...total cost is $%.2f", newDrink.getDescription(), newDrink.cost());
 			return newDrink;
 		} 
 	}

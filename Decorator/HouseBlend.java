@@ -2,7 +2,7 @@ public class HouseBlend extends Beverage {
 
 	public HouseBlend() 
 	{
-		description = "awesome Houseblend which you won't never regret about";
+		description = "awesome Houseblend which you will never forget";
 	}
 
 	public double cost() {
