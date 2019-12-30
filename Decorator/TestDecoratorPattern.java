@@ -12,7 +12,11 @@ public class TestDecoratorPattern {
 		lazyPrint("Grabbed a cup of %s as base...total cost is %f", baseBeverage.getDescription(), baseBeverage.cost());
 
 		baseBeverage = addCondiment(baseBeverage, Whip.class);
+
 		baseBeverage = addCondiment(baseBeverage,  Soy.class);
+
+		baseBeverage = addCondiment(baseBeverage,  Mocha.class);
+		baseBeverage = addCondiment(baseBeverage,  Mocha.class);
 
 	}
 
