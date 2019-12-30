@@ -9,10 +9,11 @@ public class TestDecoratorPattern {
 		lazyPrint("Making a double mocha soy latte with whipping cream...");
 
 		Beverage baseBeverage = new HouseBlend();
-		lazyPrint("Grabbed a cup of HouseBlend as base...total cost is %f", baseBeverage.cost());
+		lazyPrint("Grabbed a cup of %s as base...total cost is %f", baseBeverage.getDescription(), baseBeverage.cost());
 
-		Beverage whippedBeverage = new Whip(baseBeverage);
-		lazyPrint("Added %s on top of %s...total cost is %f", whippedBeverage.getDescription(), baseBeverage.getDescription(), whippedBeverage.cost());
+		baseBeverage = addCondiment(baseBeverage, Whip.class);
+		baseBeverage = addCondiment(baseBeverage,  Soy.class);
+
 	}
 
 	private void lazyPrint(String s) {
@@ -24,5 +25,23 @@ public class TestDecoratorPattern {
 			s = String.format(s, formattArgs);
 		}
 		lazyPrint(s);	
+	}
+
+	private Beverage addCondiment(Beverage baseBeverage, Class<? extends CondimentDecorator> c) {
+		Beverage newDrink = null;
+		try 
+		{
+			newDrink = c.getDeclaredConstructor(Beverage.class).newInstance(baseBeverage);
+		}
+		catch (Exception e) 
+		{
+			System.out.println(e.getMessage());
+			System.exit(-1);
+		}
+		finally
+		{
+			lazyPrint("Added %s...total cost is %f", newDrink.getDescription(), newDrink.cost());
+			return newDrink;
+		} 
 	}
 }

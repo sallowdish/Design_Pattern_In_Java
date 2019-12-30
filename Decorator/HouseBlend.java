@@ -1,5 +1,9 @@
 public class HouseBlend extends Beverage {
-	private String description = "Awesome Houseblend you won't regret.";
+
+	public HouseBlend() 
+	{
+		description = "a cup of awesome Houseblend which you won't never regret about";
+	}
 
 	public double cost() {
 		return 0.89;

@@ -1,5 +1,5 @@
 public abstract class Beverage {
-	private String description = "Some unknown beverage.";
+	String description = "some unknown beverage";
 
 	public String getDescription() {
 		return this.description;

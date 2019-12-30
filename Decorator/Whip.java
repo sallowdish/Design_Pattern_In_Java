@@ -6,7 +6,7 @@ public class Whip extends CondimentDecorator {
 	}
 
 	public String getDescription() {
-		return "Adding whip on top...";
+		return String.format("whipping cream on top of %s", wrapperedObject.getDescription());
 	}
 
 	public double cost() {
