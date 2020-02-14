@@ -1,3 +1,5 @@
+package pizza;
+
 public abstract class Pizza {
 	protected String description = "";
 

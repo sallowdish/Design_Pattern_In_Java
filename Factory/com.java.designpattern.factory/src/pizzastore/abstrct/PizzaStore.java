@@ -1,3 +1,7 @@
+package pizzastore;
+
+import pizza.Pizza;
+
 public abstract class PizzaStore {
 	public void orderPizza(String pizzaType) {
 		Pizza p = createPizza(pizzaType);

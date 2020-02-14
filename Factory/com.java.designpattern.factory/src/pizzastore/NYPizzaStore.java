@@ -1,3 +1,8 @@
+package pizza;
+
+import pizza.abstrct.Pizza;
+import pizzastore.abstrct.PizzaStore;
+
 public class NYPizzaStore extends PizzaStore {
 	public Pizza createPizza(String pizzaType) {
 		if (pizzaType.equals("cheese")) 
