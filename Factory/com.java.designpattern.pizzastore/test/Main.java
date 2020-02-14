@@ -1,4 +1,4 @@
-public class TestPizzaStore {
+public class Main {
 	public static void main(String[] args) {
 		PizzaStore newyorkPS = new NYPizzaStore(), chicagoPS = new ChicagoPizzaStore();
 		newyorkPS.orderPizza("cheese");
