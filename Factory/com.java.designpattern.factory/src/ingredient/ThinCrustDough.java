@@ -2,9 +2,9 @@ package ingredient;
 
 import ingredient.abstrct.Dough;
 
-public class ThickCrustDough extends Dough{
+public class ThinCrustDough extends Dough {
     @Override
     protected String setDescription() {
-        return "THICK THICK crust dough base";
+        return "Thin crust dough base";
     }
 }

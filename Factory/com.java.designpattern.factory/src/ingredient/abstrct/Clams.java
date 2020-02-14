@@ -1,4 +1,4 @@
 package ingredient.abstrct;
 
-public abstract class Clams {
+public abstract class Clams extends BaseIngredient{
 }

@@ -1,6 +1,7 @@
-package pizzastore;
+package pizzastore.abstrct;
 
-import pizza.Pizza;
+import org.jetbrains.annotations.NotNull;
+import pizza.abstrct.Pizza;
 
 public abstract class PizzaStore {
 	public void orderPizza(String pizzaType) {
@@ -12,5 +13,5 @@ public abstract class PizzaStore {
 		p.box();
 	}
 
-	abstract Pizza createPizza(String pizzaType);
+	public abstract Pizza createPizza(@NotNull String pizzaType);
 }

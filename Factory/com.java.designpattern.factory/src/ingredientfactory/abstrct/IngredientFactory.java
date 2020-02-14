@@ -1,4 +1,4 @@
-package ingredientfactory;
+package ingredientfactory.abstrct;
 
 import ingredient.abstrct.*;
 

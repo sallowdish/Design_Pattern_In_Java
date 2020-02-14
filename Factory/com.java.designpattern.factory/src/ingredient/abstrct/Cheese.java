@@ -1,4 +1,4 @@
 package ingredient.abstrct;
 
-public abstract class Cheese {
+public abstract class Cheese extends BaseIngredient{
 }
